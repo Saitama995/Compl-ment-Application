@@ -34,13 +34,11 @@ namespace Exercices_ob
         public void PrendreExp(int exp)
         {
             Console.WriteLine($"{Nom} gagne {exp} points d'expérience !");
-            Experience += exp;
 
             // Chaque 100 XP → +1 niveau
-            while (Experience >= 100)
+            while (exp >= 100 && Niveau < 250)
             {
                 Niveau++;
-                Experience -= 100;
                 Console.WriteLine($"{Nom} passe au niveau {Niveau} !");
             }
         }
