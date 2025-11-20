@@ -1,29 +1,29 @@
 namespace Exercice_ob_4;
 
-public class Produits
+public class Produit
 {
     public string Nom { get; set; }
     public decimal Prix { get; set; }
     public int Stock { get; set; }
-    
-    public Produits(string nom, decimal prix, int stock)
+
+    public Produit(string nom, decimal prix, int stock)
     {
         Nom = nom;
         Prix = prix;
         Stock = stock;
-        
     }
+
     //Ajouter stock
-    public void AjouterStock (int quantite)
-        {
+    public void AjouterStock(int quantite)
+    {
         if (Stock >= quantite)
         {
             quantite++;
             Console.WriteLine($"stockage actuel {quantite}");
         }
-        
-        }
-    public void RetirerStocket (int quantite)
+    }
+
+    public void RetirerStocket(int quantite)
     {
         if (Stock >= quantite)
         {
@@ -34,8 +34,8 @@ public class Produits
         {
             Console.WriteLine($"stockage insuffisant {quantite}");
         }
-        
     }
+
     // Méthode Acheter
     public double Acheter(int quantite)
     {
@@ -46,9 +46,9 @@ public class Produits
 
         if (Stock >= quantite)
         {
-            Stock -= quantite; 
+            Stock -= quantite;
             decimal total = quantite * Prix;
-            return (double)total;    
+            return (double)total;
         }
         else
         {

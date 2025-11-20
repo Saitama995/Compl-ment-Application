@@ -9,8 +9,8 @@ public class Comptebancaire
     public string Prenom { get; set; }
     public string Numerodecompte { get; set; }
     private decimal Solde { get; set; }
-    
-    
+
+
     //Constructeur 
     public Comptebancaire(string numero, decimal soldeInitial, string nom, string prenom)
     {
@@ -18,7 +18,6 @@ public class Comptebancaire
         Nom = nom;
         Prenom = prenom;
         Solde = soldeInitial;
-        
     }
 
     public void deposer(decimal montant)
@@ -26,7 +25,7 @@ public class Comptebancaire
     {
         if (montant > 0)
         {
-            Solde +=montant;
+            Solde += montant;
         }
     }
 
@@ -40,13 +39,13 @@ public class Comptebancaire
         else
         {
             Console.WriteLine("Le solde est insuffisant");
-             return false;
+            return false;
         }
     }
 
     public void AfficherSolde()
-        {
-            //Console.WriteLine($"Solde de débart {soldeInitial}");
-            Console.WriteLine($"Mr {Nom} il vous reste sur votre compte le montant de {Solde} !");
-        }
+    {
+        //Console.WriteLine($"Solde de débart {soldeInitial}");
+        Console.WriteLine($"Mr {Nom} il vous reste sur votre compte le montant de {Solde} !");
+    }
 }

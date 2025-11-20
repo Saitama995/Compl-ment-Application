@@ -1,5 +1,4 @@
-﻿
-// création personnage 
+﻿// création personnage 
 
 
 using Exercices_ob;
