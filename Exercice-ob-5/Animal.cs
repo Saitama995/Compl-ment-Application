@@ -18,6 +18,11 @@ public class Animal
         Console.WriteLine($"{Nom} l'animal fait du bruit ");
     }
 
+    public virtual void Manger()
+    {
+        Console.WriteLine($" pour {Nom} qui va le manger");
+    }
+
     //public abstract void Fairebruit();
     
     
@@ -29,9 +34,15 @@ public class Animal
 
         public override void Fairebruit()
             {
-                Console.Write(" Woof! Woof!");
+                Console.Write(" Woof! Woof! ");
                 base.Fairebruit();
             }
+
+        public override void Manger()
+        {
+            Console.Write(" Pâtée ");
+            base.Manger();
+        }
     }
     
 
@@ -43,9 +54,15 @@ public class Animal
 
         public override void Fairebruit()
             {
-                Console.WriteLine(" Miaou! Miaou!");
+                Console.WriteLine(" Miaou! Miaou! ");
                 base.Fairebruit();
             }
+
+        public override void Manger()
+        {
+            Console.Write(" croquette ");
+            base.Manger();
+        }
 
         }
     
@@ -58,15 +75,21 @@ public class Animal
 
         public override void Fairebruit()
             {
-                Console.WriteLine(" Piou! Piou!");
+                Console.WriteLine(" Piou! Piou! ");
                 base.Fairebruit();
             }
 
+        public override void Manger()
+        {
+            Console.Write(" graine ");
+            base.Manger();
         }
 
-    public void Manger(string nourriture)
-    {
-        Console.WriteLine($"{Nom} donner de la {nourriture}.");
-    }
+        }
+
+ //   public void Manger(string nourriture)
+    //{
+   //     Console.WriteLine($"{Nom} va manger {nourriture}.");
+ //   }
 
 }
