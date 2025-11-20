@@ -15,7 +15,7 @@ public class Animal
 
     public virtual void Fairebruit()
     {
-        Console.WriteLine($"{Nom} l'animal fait du bruit");
+        Console.WriteLine($"{Nom} l'animal fait du bruit ");
     }
 
     //public abstract void Fairebruit();
@@ -29,7 +29,7 @@ public class Animal
 
         public override void Fairebruit()
             {
-                Console.WriteLine(" Woof! Woof!");
+                Console.Write(" Woof! Woof!");
                 base.Fairebruit();
             }
     }
